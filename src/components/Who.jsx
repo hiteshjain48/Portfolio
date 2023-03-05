@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from './Navbar'
 import styled from 'styled-components';
 const Container = styled.div`
     width:70em;
@@ -25,23 +24,6 @@ const Left = styled.div`
 const Title = styled.h1`
     font-size:5em;
     margin:0;
-`;
-
-const Img = styled.img`
-    height:25em;
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    margin:auto;
-    animation: animate 2s infinite ease alternate;
-
-    @keyframes animate{
-        to{
-            transform:translateY(2em);
-        }
-    }
 `;
 
 const Info = styled.p`
