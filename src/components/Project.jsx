@@ -33,11 +33,42 @@ const List = styled.ul`
     list-style:none;
     display:flex;
     flex-direction:column;
+    // align-items: center;
+    justify-content: center;
     gap:1em;
 `;
 
 const ListItem = styled.li`
-    
+    font-size:3.5em;
+    font-weight:bold;
+    color:transparent;
+    cursor:pointer;
+    -webkit-text-stroke:.005em white;
+    position:relative;
+    ::after{
+        content:"${(props)=>props.text}";
+       color:white;
+       width:0;
+       overflow:hidden;
+       position:absolute;
+       top:0;
+       left:0;
+       bottom:0;
+       right:0;
+       white-space:nowrap;
+    }
+
+    &:hover{
+        ::after{
+            animation: move 0.5s linear both;
+        }
+
+        @keyframes move{
+            to{
+                width:100%;
+            }
+        }
+    }
 `;
 
 const Project = () => {
@@ -47,7 +78,7 @@ const Project = () => {
         <Left>
            <List>
                {data.map((item)=>{
-                return <ListItem key={item}>{item}</ListItem>
+                return <ListItem key={item} text={item}>{item}</ListItem>
                })}
            </List>
         </Left>
