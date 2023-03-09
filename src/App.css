@@ -40,3 +40,11 @@
   display: flex;
   justify-content: center;
 }
+
+.contact{
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

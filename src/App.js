@@ -10,7 +10,7 @@ function App() {
       <Hero/>
       <Who/>
       <Project/>
-      <Contact/>
+      <Contact/> 
     </div>
   );
 }
