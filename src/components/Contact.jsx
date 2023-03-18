@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import styled from 'styled-components';
 import Map from './Map';
+import emailjs from '@emailjs/browser';
+// import MapChart from './Map';
 const Container = styled.div`
     width:1000%;
     display:flex;
@@ -61,17 +63,33 @@ const Button = styled.button`
     cursor:pointer;
 `;
 
+
 const Contact = () => {
+  const form = useRef();
+  
+  const [success, setSuccess] = useState(null);
+  const handleSubmit = e => {
+    e.preventDefault();
+    emailjs.sendForm('service_vjnxu1o', 'template_gyp0muy', form.current, 'HDWvZMQ5Aa00lTgid')
+    .then((result) => {
+        console.log(result.text);
+        setSuccess(true);
+    }, (error) => {
+        console.log(error.text);
+        setSuccess(false);
+    });
+  }
   return (
     <div className='contact'>
       <Container>
         <Left>
-            <Form>
+            <Form onSubmit={handleSubmit} ref={form}>
               <Title>Contact Me.</Title>
-              <Input placeholder='Name'></Input>
-              <Input placeholder='Email'></Input>
-              <Textarea placeholder='Write your message...'></Textarea>
-              <Button>Submit</Button>
+              <Input placeholder='Name' name='name'></Input>
+              <Input placeholder='Email' name='email'></Input>
+              <Textarea placeholder='Write your message...' name='message'></Textarea>
+              <Button type='submit'>Submit</Button>
+              {success && "Your message has been sent!"}
             </Form>
         </Left>
         <Right>
@@ -80,6 +98,6 @@ const Contact = () => {
       </Container>
     </div>
   )
-}
 
+}
 export default Contact;

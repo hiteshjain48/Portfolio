@@ -34,7 +34,7 @@ const Map = () => {
         }
       </Geographies>
       <Annotation
-        subject={[2.3522, 48.8566]}
+        subject={[18.5204, 73.8567]}
         dx={-90}
         dy={-30}
         connectorProps={{
@@ -52,3 +52,24 @@ const Map = () => {
 };
 
 export default Map;
+
+// import React from "react";
+// import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+
+// const geoUrl =
+//   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+
+// const MapChart = () => {
+//   return (
+//     <ComposableMap>
+//       <Geographies geography={geoUrl}>
+//         {({ geographies }) =>
+//           geographies.map(geo => <Geography key={geo.rsmKey} geography={geo} />)
+//         }
+//       </Geographies>
+//     </ComposableMap>
+//   );
+// };
+
+// export default MapChart;
+
