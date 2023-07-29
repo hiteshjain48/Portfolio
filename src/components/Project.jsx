@@ -80,11 +80,18 @@ const ListItem = styled.li`
 `;
 const Logos = styled.div`
     display: grid;
-    grid-template-columns: repeat(4, 8em);
-    grid-template-rows: 5em 5em 5em;
+ 
     align-items:center;
     justify-content:center;
     grid-gap:1em;
+    padding-left:4.5em;
+    @media only screen and (max-width:769px) {
+        grid-template-columns: repeat(4, 8em);
+     }
+`;
+const Img = styled.div`
+     padding:.5em;
+     background:white;
 `;
 const Logo = styled.img`
     height:5em;
@@ -105,14 +112,39 @@ const Project = () => {
         </Left>
         <Right>
             <Logos>
-                <Logo src='./img/html.svg'></Logo>
-                <Logo src='./img/css.svg'></Logo>
-                <Logo src='./img/git.svg'></Logo>
-                <Logo src='./img/go.svg'></Logo>
-                <Logo src='./img/node.svg'></Logo>
-                <Logo src='./img/mysql.svg'></Logo>
-                <Logo src='./img/python.svg'></Logo>
-                <Logo src='./img/react.svg'></Logo>
+                <Img>
+                    <Logo src='./img/html.svg'></Logo>
+                </Img>
+                <Img>
+                    <Logo src='./img/css.svg'></Logo>
+                </Img>
+                <Img>
+                    <Logo src='./img/git.svg'></Logo>
+                </Img>
+                <Img>
+                    <Logo src='./img/go.svg'></Logo>
+                </Img>
+                <Img>
+                    <Logo src='./img/node.svg'></Logo>
+                </Img>
+                <Img>
+                    <Logo src='./img/mysql.svg'></Logo>
+                </Img>
+                <Img>
+                    <Logo src='./img/python.svg'></Logo>
+                </Img>
+                <Img>
+                    <Logo src='./img/react.svg'></Logo>
+                </Img>
+                <Img>
+                    <Logo src='./img/react.svg'></Logo>
+                </Img>
+                 <Img>
+                    <Logo src='./img/react.svg'></Logo>
+                </Img>
+                <Img>
+                    <Logo src='./img/react.svg'></Logo>
+                </Img>
             </Logos>
         </Right>
       </Container>
