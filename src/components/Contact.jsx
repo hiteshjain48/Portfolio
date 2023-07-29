@@ -20,6 +20,9 @@ const Left = styled.div`
     display:flex;
     justify-content:flex-end;
     align-item:center;
+    flex-direction:column;
+    padding-left:4.5em;
+    flex-wrap: wrap;
     @media only screen and (max-width:769px) {
       justify-content:center;
       padding:1.5em;
@@ -73,8 +76,15 @@ const Button = styled.button`
     color:white;
     cursor:pointer;
 `;
-
-
+const Logo = styled.img`
+    height:3em;
+    width:3em;
+    padding:1.5em;
+`;
+const Social = styled.div`
+  padding:1.5em;
+  justify-content: center;
+`;
 const Contact = () => {
   const form = useRef();
   
@@ -93,6 +103,7 @@ const Contact = () => {
   return (
     <div className='contact'>
       <Container>
+        <>
         <Left>
             <Form onSubmit={handleSubmit} ref={form}>
               <Title>Contact Me.</Title>
@@ -102,10 +113,16 @@ const Contact = () => {
               <Button type='submit'>Submit</Button>
               {success && "Your message has been sent!"}
             </Form>
+          <Social>
+            <Logo src='./img/linkedin.svg'></Logo>
+            <Logo src='./img/twitter.svg'></Logo>
+            <Logo src='./img/github1.svg'></Logo>
+          </Social>
         </Left>
         <Right>
           <Map></Map>
         </Right>
+        </>
       </Container>
     </div>
   )

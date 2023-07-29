@@ -27,6 +27,7 @@ const Left = styled.div`
         justify-content:center;
         padding:1.5em;
      }
+     font-family: 'Libre Caslon Text', serif;
 `;
 
 const Right = styled.div`

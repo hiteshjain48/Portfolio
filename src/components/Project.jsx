@@ -53,6 +53,10 @@ const ListItem = styled.li`
     cursor:pointer;
     -webkit-text-stroke:.005em white;
     position:relative;
+    @media only screen and (max-width:769px) {
+       color:white;
+       -webkit-text-stroke:0;
+     }
     ::after{
         content:"${(props)=>props.text}";
        color:white;
@@ -80,7 +84,7 @@ const ListItem = styled.li`
 `;
 const Logos = styled.div`
     display: grid;
- 
+    grid-template-columns: repeat(4, 8em);
     align-items:center;
     justify-content:center;
     grid-gap:1em;
