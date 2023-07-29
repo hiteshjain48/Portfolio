@@ -86,7 +86,7 @@ const Logos = styled.div`
     grid-gap:1em;
     padding-left:4.5em;
     @media only screen and (max-width:769px) {
-        grid-template-columns: repeat(4, 8em);
+        grid-template-columns: repeat(2, 8em);
      }
 `;
 const Img = styled.div`
