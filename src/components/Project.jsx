@@ -31,6 +31,10 @@ const Left = styled.div`
 const Right = styled.div`
     flex:1;
     position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
 `;
 
 const List = styled.ul`
@@ -74,7 +78,20 @@ const ListItem = styled.li`
         }
     }
 `;
-
+const Logos = styled.div`
+    display: grid;
+    grid-template-columns: repeat(4, 8em);
+    grid-template-rows: 5em 5em 5em;
+    align-items:center;
+    justify-content:center;
+    grid-gap:1em;
+`;
+const Logo = styled.img`
+    height:5em;
+    width:5em;
+    margin:0;
+    padding:0;
+`;
 const Project = () => {
   return (
     <div className='project'>
@@ -87,6 +104,16 @@ const Project = () => {
            </List>
         </Left>
         <Right>
+            <Logos>
+                <Logo src='./img/html.svg'></Logo>
+                <Logo src='./img/css.svg'></Logo>
+                <Logo src='./img/git.svg'></Logo>
+                <Logo src='./img/go.svg'></Logo>
+                <Logo src='./img/node.svg'></Logo>
+                <Logo src='./img/mysql.svg'></Logo>
+                <Logo src='./img/python.svg'></Logo>
+                <Logo src='./img/react.svg'></Logo>
+            </Logos>
         </Right>
       </Container>
     </div>
