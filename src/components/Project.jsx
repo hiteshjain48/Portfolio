@@ -91,7 +91,6 @@ const Logos = styled.div`
 `;
 const Img = styled.div`
      padding:.5em;
-     background:white;
 `;
 const Logo = styled.img`
     height:5em;
@@ -132,15 +131,6 @@ const Project = () => {
                 </Img>
                 <Img>
                     <Logo src='./img/python.svg'></Logo>
-                </Img>
-                <Img>
-                    <Logo src='./img/react.svg'></Logo>
-                </Img>
-                <Img>
-                    <Logo src='./img/react.svg'></Logo>
-                </Img>
-                 <Img>
-                    <Logo src='./img/react.svg'></Logo>
                 </Img>
                 <Img>
                     <Logo src='./img/react.svg'></Logo>
