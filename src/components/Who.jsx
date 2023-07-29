@@ -6,6 +6,9 @@ const Container = styled.div`
     justify-content:space-between;
     height:100vh;
     scroll-snap-align:center;
+    @media only screen and (max-width:769px) {
+      width:100%;
+   }
 `;
 
 const Right = styled.div`
@@ -15,10 +18,16 @@ const Right = styled.div`
     justify-content:center;
     align-item:center;
     gap:1em;
+    @media only screen and (max-width:769px) {
+      padding:1.5em;
+   }
 `;
 
 const Left = styled.div`
     flex:1;
+    @media only screen and (max-width:769px) {
+      display:none;
+   }
 `;
 
 const Title = styled.h1`

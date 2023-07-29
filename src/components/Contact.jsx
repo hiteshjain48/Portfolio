@@ -9,6 +9,10 @@ const Container = styled.div`
     justify-content:space-between;
     height:100%;
     scroll-snap-align:center;
+    @media only screen and (max-width:769px) {
+      width:100%;
+      flex-direction:column;
+   }
 `;
 
 const Left = styled.div`
@@ -16,10 +20,17 @@ const Left = styled.div`
     display:flex;
     justify-content:flex-end;
     align-item:center;
+    @media only screen and (max-width:769px) {
+      justify-content:center;
+      padding:1.5em;
+   }
 `;
 
 const Right = styled.div`
     flex:1;
+    @media only screen and (max-width:769px) {
+      display:none;
+   }
 `;
 
 const Title = styled.h1`

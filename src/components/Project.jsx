@@ -13,6 +13,10 @@ const Container = styled.div`
     justify-content:space-between;
     height:100vh;
     scroll-snap-align:center;
+    @media only screen and (max-width:769px) {
+        width:100%;
+        flex-direction:column;
+     }
 `;
 
 const Left = styled.div`
